@@ -17,9 +17,39 @@
   </head>
   <body>
     <div class="top-bg"></div>
-    IP Address Tracker Search for any IP address or domain IP Address Location
-    Timezone UTC
+    <header><h1>IP Address Tracker</h1></header>
+    <form class="search-bar" action="">
+      <input id="IP-search" type="text" placeholder="Search for any IP address or domain" name="search"></input>
+      <button id="search-enter-btn" type="submit">
+        <img src="./images/icon-arrow.svg" alt="">
+      </button>
+    </form>
+    <ul class="result-card">
+      <li>
+        <h2 class="result-title">
+          IP Address
+        </h2>
+        <p class="result">192.212.174.101</p>
+      </li>
+      <li>
+        <h2 class="result-title">
+          Location
+        </h2>
+        <p class="result">Brooklyn, NY 10001</p>
+      </li>
+      <li>
+        <h2 class="result-title">
+          Timezone
+        </h2>
+        <p class="result">UTC - 05:00</p>
+      </li>
+      <li>
+        <h2 class="result-title">
+          ISP
+        </h2>
+        <p class="result">SpaceX Starlink</p>
+      </li>
+    </ul>
     <!-- add offset value dynamically using the API -->
-    ISP
   </body>
 </html>
