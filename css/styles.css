@@ -14,9 +14,23 @@ html {
   font-size: 62.5%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: 'Rubik', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .top-bg {
@@ -28,5 +42,79 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1;
+}
+
+header {
+  margin-top: 3rem;
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.search-bar {
+  width: 88%;
+  margin-top: 3.5rem;
+}
+
+.search-bar input {
+  width: 80%;
+  float: left;
+  margin: 0;
+  padding: 2rem;
+  border: 0;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.search-bar button {
+  width: 20%;
+  float: left;
+  margin: 0;
+  padding: 2rem;
+  border: 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: #000;
+  font-size: 1.8rem;
+}
+
+.result-card {
+  width: 88%;
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.result-card .result-title {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #969696;
+}
+
+.result-card .result {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */
