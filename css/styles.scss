@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // background-color: green;
 }
 
 .top-bg {
@@ -53,6 +54,7 @@ header {
 
 .search-bar {
   width: 88%;
+  max-width: 55.5rem;
   margin-top: 3.5rem;
 
   input {
@@ -71,7 +73,7 @@ header {
     float: left;
     margin: 0;
     padding: 2rem;
-    border: 0;
+    border: none;
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     background-color: #000;
@@ -81,6 +83,7 @@ header {
 
 .result-card {
   width: 88%;
+  max-width: 111rem;
   margin-top: 2.5rem;
   padding-bottom: 2.5rem;
   border-radius: 1.5rem;
@@ -91,8 +94,11 @@ header {
   align-items: center;
   text-align: center;
 
-  .result-title {
+  li {
     margin-top: 3rem;
+  }
+
+  .result-title {
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -103,5 +109,34 @@ header {
     margin-top: 1.5rem;
     font-size: 2rem;
     font-weight: 700;
+  }
+}
+
+@media (min-width: 1000px) {
+  .result-card {
+    margin-top: 5rem;
+    padding: 3.5rem 0;
+    flex-direction: row;
+    text-align: left;
+
+    li {
+      width: 100%;
+      margin: 0;
+      margin-left: 3.5rem;
+    }
+
+    .result-content {
+      width: 65%;
+    }
+
+    .result {
+      margin-top: 2rem;
+    }
+
+    .divider {
+      height: 100px;
+      width: 1px;
+      background-color: $dk-gray;
+    }
   }
 }
