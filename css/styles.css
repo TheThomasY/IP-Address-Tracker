@@ -81,6 +81,11 @@ header h1 {
   border-bottom-right-radius: 1.5rem;
   background-color: #000;
   font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #2b2b2b;
 }
 
 .result-card {
