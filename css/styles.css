@@ -128,6 +128,11 @@ header h1 {
   font-weight: 700;
 }
 
+#mapid {
+  width: 100vw;
+  height: 30rem;
+}
+
 @media (min-width: 1000px) {
   .search-bar input {
     font-size: 1.8rem;
