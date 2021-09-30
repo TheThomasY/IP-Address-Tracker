@@ -139,6 +139,9 @@ header h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     text-align: left;
   }
   .result-card li {

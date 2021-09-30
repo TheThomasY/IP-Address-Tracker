@@ -2,7 +2,7 @@
 const searchInput = document.getElementById('search-input');
 const searchForm = document.getElementById('search-form');
 
-// Results
+// HTML to show results
 const resultIP = document.getElementById('result-IP');
 const resultLocal = document.getElementById('result-local');
 const resultTimezone = document.getElementById('result-timezone');
@@ -30,7 +30,7 @@ const submitted = (event) => {
         return response.json();
       })
       .then((dataCurrent) => {
-        console.log(dataCurrent);
+        // console.log(dataCurrent);
         if (dataCurrent.hasOwnProperty('code')) {
           console.log('Invalid IP Address');
         } else {
@@ -38,7 +38,6 @@ const submitted = (event) => {
           const { isp } = dataCurrent;
           const { city, country, lat, lng, region, timezone } =
             dataCurrent.location;
-          console.log(city);
           resultIP.innerHTML = input;
           resultLocal.innerHTML = city + ', ' + region;
           resultTimezone.innerHTML = timezone;
