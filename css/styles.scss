@@ -117,6 +117,11 @@ header {
   }
 }
 
+#mapid {
+  width: 100vw;
+  height: 30rem;
+}
+
 @media (min-width: 1000px) {
   .search-bar {
     input {
