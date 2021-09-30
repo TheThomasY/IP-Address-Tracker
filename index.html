@@ -18,8 +18,8 @@
   <body>
     <div class="top-bg"></div>
     <header><h1>IP Address Tracker</h1></header>
-    <form class="search-bar" action="">
-      <input id="IP-search" type="text" placeholder="Search for any IP address or domain" name="search"></input>
+    <form id="search-form" class="search-bar" action="">
+      <input id="search-input" type="text" placeholder="Search for any IP address or domain" name="search"></input>
       <button id="search-enter-btn" type="submit">
         <img src="./images/icon-arrow.svg" alt="">
       </button>
@@ -30,7 +30,7 @@
           <h2 class="result-title">
             IP Address
           </h2>
-          <p class="result">192.212.174.101</p>
+          <p id="result-IP" class="result">192.212.174.101</p>
         </div>
       </li>
       <div class="divider"></div>
@@ -39,7 +39,7 @@
           <h2 class="result-title">
             Location
           </h2>
-          <p class="result">Brooklyn, NY 10001</p>
+          <p id="result-local" class="result">Brooklyn, NY 10001</p>
         </div>
       </li>
       <div class="divider"></div>
@@ -48,7 +48,7 @@
           <h2 class="result-title">
             Timezone
           </h2>
-          <p class="result">UTC - 05:00</p>
+          <p id="result-timezone" class="result">UTC - 05:00</p>
         </div>
       </li>
       <div class="divider"></div>
@@ -57,10 +57,11 @@
           <h2 class="result-title">
             ISP
           </h2>
-          <p class="result">SpaceX Starlink</p>
+          <p id="result-ISP" class="result">SpaceX Starlink</p>
         </div>
       </li>
     </ul>
     <!-- add offset value dynamically using the API -->
+    <script src="./scripts/search-form.js"></script>
   </body>
 </html>

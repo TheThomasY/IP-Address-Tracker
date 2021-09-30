@@ -68,7 +68,7 @@ header h1 {
   border: 0;
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .search-bar button {
@@ -81,6 +81,11 @@ header h1 {
   border-bottom-right-radius: 1.5rem;
   background-color: #000;
   font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #2b2b2b;
 }
 
 .result-card {
@@ -124,6 +129,9 @@ header h1 {
 }
 
 @media (min-width: 1000px) {
+  .search-bar input {
+    font-size: 1.8rem;
+  }
   .result-card {
     margin-top: 5rem;
     padding: 3.5rem 0;
@@ -131,6 +139,9 @@ header h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     text-align: left;
   }
   .result-card li {

@@ -65,7 +65,7 @@ header {
     border: 0;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   button {
@@ -78,6 +78,11 @@ header {
     border-bottom-right-radius: 1.5rem;
     background-color: #000;
     font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $vdk-gray;
   }
 }
 
@@ -113,10 +118,17 @@ header {
 }
 
 @media (min-width: 1000px) {
+  .search-bar {
+    input {
+      font-size: 1.8rem;
+    }
+  }
+
   .result-card {
     margin-top: 5rem;
     padding: 3.5rem 0;
     flex-direction: row;
+    align-items: flex-start;
     text-align: left;
 
     li {
