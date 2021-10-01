@@ -18,6 +18,34 @@ const formatIP = (strIP) => {
   }
 };
 
+// Map
+const generateMap = (lat, lng) => {
+  const mapOptions = {
+    zoomControl: false,
+    attributionControl: false,
+  };
+
+  let map = L.map('map', mapOptions).setView([lat, lng], 13);
+
+  L.tileLayer(
+    'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+    {
+      attribution:
+        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken:
+        'pk.eyJ1Ijoid2hhdGF0b20iLCJhIjoiY2t1NzF6ajdyMW9xYTJwbzZsNmR0dHFmYiJ9.CJq2eJhMFv8Ob5yLHEBdow',
+    }
+  ).addTo(map);
+};
+
+window.addEventListener('load', () => {
+  generateMap(51.509865, -0.118092);
+});
+
 const submitted = (event) => {
   event.preventDefault();
   let input = searchInput.value;
@@ -42,6 +70,8 @@ const submitted = (event) => {
           resultLocal.innerHTML = city + ', ' + region;
           resultTimezone.innerHTML = timezone;
           resultISP.innerHTML = isp;
+
+          generateMap(lat, lng);
         }
       });
   }
