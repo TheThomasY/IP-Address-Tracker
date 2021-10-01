@@ -56,7 +56,6 @@ header {
   width: 88%;
   max-width: 55.5rem;
   margin-top: 3.5rem;
-  cursor: pointer;
 
   input {
     width: 80%;
@@ -68,6 +67,7 @@ header {
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     font-size: 1.3rem;
+    cursor: pointer;
   }
 
   button {
@@ -81,6 +81,7 @@ header {
     border-bottom-right-radius: 1.5rem;
     background-color: #000;
     font-size: 1.3rem;
+    cursor: pointer;
   }
 
   button:hover {
