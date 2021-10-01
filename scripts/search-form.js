@@ -22,7 +22,12 @@ const formatIP = (strIP) => {
 const generateMap = (lat, lng) => {
   const mapOptions = {
     zoomControl: false,
+    boxZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+    scrollWheelZoom: false,
     attributionControl: false,
+    dragging: false,
   };
 
   let map = L.map('map', mapOptions).setView([lat, lng], 13);

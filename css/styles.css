@@ -112,6 +112,8 @@ header h1 {
           align-items: center;
   text-align: center;
   z-index: 1000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
 }
 
 .result-card li {
@@ -139,6 +141,9 @@ header h1 {
 }
 
 @media (min-width: 1000px) {
+  header h1 {
+    font-size: 3.4rem;
+  }
   .search-bar input,
   .search-bar button {
     height: 6rem;
@@ -171,6 +176,12 @@ header h1 {
     height: 100px;
     width: 1px;
     background-color: #969696;
+  }
+}
+
+@media (min-width: 1100px) {
+  .result-card .result {
+    font-size: 2.6rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
