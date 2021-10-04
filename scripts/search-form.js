@@ -36,7 +36,17 @@ const generateMap = (lat, lng) => {
 
   if (map) map.remove();
 
-  map = L.map('map', mapOptions).setView([lat, lng], 13);
+  map = L.map('map', mapOptions).setView([lat + 0.005, lng], 13);
+
+  var myIcon = L.icon({
+    iconUrl: './images/icon-location.svg',
+    iconSize: [46, 55],
+    iconAnchor: [23, 55],
+  });
+
+  L.marker([lat, lng], { icon: myIcon }).addTo(map);
+
+  // var marker = L.marker([lat, lng]).addTo(map);
 
   L.tileLayer(
     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
@@ -78,7 +88,8 @@ const submitted = (event) => {
           const { city, country, lat, lng, region, timezone } =
             dataCurrent.location;
           resultIP.innerHTML = input;
-          resultLocal.innerHTML = city + ', ' + region;
+          // resultLocal.innerHTML = city + ', ' + region;
+          resultLocal.innerHTML = city;
           resultTimezone.innerHTML = timezone;
           resultISP.innerHTML = isp;
 
