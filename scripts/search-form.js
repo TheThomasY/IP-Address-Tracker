@@ -8,6 +8,10 @@ const resultLocal = document.getElementById('result-local');
 const resultTimezone = document.getElementById('result-timezone');
 const resultISP = document.getElementById('result-ISP');
 
+// Map
+const mapHTML = document.getElementById('map');
+let map = null;
+
 // Functions
 const formatIP = (strIP) => {
   const regexIP = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
@@ -30,7 +34,9 @@ const generateMap = (lat, lng) => {
     dragging: false,
   };
 
-  let map = L.map('map', mapOptions).setView([lat, lng], 13);
+  if (map) map.remove();
+
+  map = L.map('map', mapOptions).setView([lat, lng], 13);
 
   L.tileLayer(
     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
