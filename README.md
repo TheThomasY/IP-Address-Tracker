@@ -26,7 +26,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 ## Future Updates 🎁
 
 - [ ] Add animation when changing map locations - this is supported by Leaflet JS.
-- [ ] Fix overlap in map controls
+- [ ] Fix overlapping map controls in mobile
 
 ## Author 🧑
 
