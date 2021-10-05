@@ -115,6 +115,8 @@ header h1 {
   z-index: 1000;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
+  -webkit-transition: width 0.5s ease-in, opacity 0.5s ease-in;
+  transition: width 0.5s ease-in, opacity 0.5s ease-in;
 }
 
 .result-card li {
@@ -132,6 +134,11 @@ header h1 {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.result-card:not(.show) {
+  width: 0px;
+  opacity: 0;
 }
 
 #map {
@@ -152,7 +159,7 @@ header h1 {
   }
   .result-card {
     margin-top: 5rem;
-    padding: 3.5rem 0;
+    padding: 3rem 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -168,21 +175,16 @@ header h1 {
     margin-left: 3.5rem;
   }
   .result-card .result-content {
-    width: 65%;
+    width: 80%;
   }
   .result-card .result {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    font-size: 2.2rem;
   }
   .result-card .divider {
-    height: 100px;
+    height: 80px;
     width: 1px;
     background-color: #969696;
-  }
-}
-
-@media (min-width: 1100px) {
-  .result-card .result {
-    font-size: 2.6rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

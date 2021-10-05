@@ -8,30 +8,33 @@ const resultLocal = document.getElementById('result-local');
 const resultTimezone = document.getElementById('result-timezone');
 const resultISP = document.getElementById('result-ISP');
 
+const resultCard = document.getElementsByClassName('result-card')[0];
+
 // Map
 const mapHTML = document.getElementById('map');
 let map = null;
 
 // Functions
 const formatIP = (strIP) => {
+  if (strIP === '') return;
   const regexIP = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
   if (regexIP.test(strIP)) {
     return true;
   } else {
-    console.log('Invalid IP');
+    swal('Invalid IP Address', 'Please try again', 'error');
   }
 };
 
 // Map
 const generateMap = (lat, lng) => {
   const mapOptions = {
-    zoomControl: false,
-    boxZoom: false,
-    doubleClickZoom: false,
-    touchZoom: false,
-    scrollWheelZoom: false,
+    // zoomControl: false,
+    // boxZoom: false,
+    // doubleClickZoom: false,
+    // touchZoom: false,
+    // scrollWheelZoom: false,
     attributionControl: false,
-    dragging: false,
+    // dragging: false,
   };
 
   if (map) map.remove();
@@ -45,8 +48,6 @@ const generateMap = (lat, lng) => {
   });
 
   L.marker([lat, lng], { icon: myIcon }).addTo(map);
-
-  // var marker = L.marker([lat, lng]).addTo(map);
 
   L.tileLayer(
     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
@@ -63,9 +64,9 @@ const generateMap = (lat, lng) => {
   ).addTo(map);
 };
 
-window.addEventListener('load', () => {
-  generateMap(51.509865, -0.118092);
-});
+// window.addEventListener('load', () => {
+//   generateMap(51.509865, -0.118092);
+// });
 
 const submitted = (event) => {
   event.preventDefault();
@@ -81,7 +82,7 @@ const submitted = (event) => {
       .then((dataCurrent) => {
         // console.log(dataCurrent);
         if (dataCurrent.hasOwnProperty('code')) {
-          console.log('Invalid IP Address');
+          swal('IP Address not found', 'Please try again', 'error');
         } else {
           // Extract data
           const { isp } = dataCurrent;
@@ -92,6 +93,8 @@ const submitted = (event) => {
           resultLocal.innerHTML = city;
           resultTimezone.innerHTML = timezone;
           resultISP.innerHTML = isp;
+
+          resultCard.classList.add('show');
 
           generateMap(lat, lng);
         }

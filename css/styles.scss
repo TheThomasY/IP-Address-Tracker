@@ -104,6 +104,7 @@ header {
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px,
     rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
+  transition: width 0.5s ease-in, opacity 0.5s ease-in;
 
   li {
     margin-top: 2.5rem;
@@ -121,6 +122,11 @@ header {
     font-size: 2rem;
     font-weight: 700;
   }
+}
+
+.result-card:not(.show) {
+  width: 0px;
+  opacity: 0;
 }
 
 #map {
@@ -147,7 +153,7 @@ header {
 
   .result-card {
     margin-top: 5rem;
-    padding: 3.5rem 0;
+    padding: 3rem 0;
     flex-direction: row;
     align-items: flex-start;
     text-align: left;
@@ -159,25 +165,18 @@ header {
     }
 
     .result-content {
-      width: 65%;
+      width: 80%;
     }
 
     .result {
-      margin-top: 2rem;
+      margin-top: 1rem;
+      font-size: 2.2rem;
     }
 
     .divider {
-      height: 100px;
+      height: 80px;
       width: 1px;
       background-color: $dk-gray;
-    }
-  }
-}
-
-@media (min-width: 1100px) {
-  .result-card {
-    .result {
-      font-size: 2.6rem;
     }
   }
 }
