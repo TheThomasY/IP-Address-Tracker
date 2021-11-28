@@ -11,8 +11,8 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 ## Screenshots 📷
 
 <p float="left">
-  <img src="./screenshots/screenshot-mobile.png" width="300px">
   <img src="./screenshots/screenshot-desktop.png">
+  <img src="./screenshots/screenshot-mobile.png" width="300px">
 </p>
 
 ## Built With 🛠
