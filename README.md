@@ -1,12 +1,13 @@
 <h1 align="center">IP Address Tracker - Frontend Mentor solution</h1>
 
-This website allows users to locate an IP address from anywhere in the world and see an interactive map corresponding to its location.
+Enter an IP address from anywhere in the world and see an interactive map corresponding to its location. Need an example address? Try 8.8.8.8 or 17.0.0.0 for two famous tech companies.
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
 ## Links 🌟
 
 - Live site: [Try it out here 💻](https://thethomasy.github.io/IP-Address-Tracker/ 'Live View')
+- This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
+
 
 ## Screenshots 📷
 
@@ -18,7 +19,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 ## Built With 🛠
 
 - HTML
-- SASS
+- [Sass](https://sass-lang.com/)
 - JavaScript
 - [IP Geolocation API](https://geo.ipify.org/)
 - [Leaflet JS](https://leafletjs.com/)
