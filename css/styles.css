@@ -35,7 +35,7 @@ body {
 
 .top-bg {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   position: absolute;
   background: url(../images/pattern-bg.png);
   background-repeat: no-repeat;
@@ -94,17 +94,20 @@ header h1 {
 .result-card {
   width: 88%;
   max-width: 111rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
   padding-bottom: 2.5rem;
   border-radius: 1.5rem;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -117,10 +120,12 @@ header h1 {
           box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -6px, rgba(0, 0, 0, 0.1) 0px 8px 12px -4px;
   -webkit-transition: width 0.5s ease-in, opacity 0.5s ease-in;
   transition: width 0.5s ease-in, opacity 0.5s ease-in;
+  position: relative;
 }
 
 .result-card li {
-  margin-top: 2.5rem;
+  width: 50%;
+  margin-top: 2rem;
 }
 
 .result-card .result-title {
@@ -132,8 +137,17 @@ header h1 {
 
 .result-card .result {
   margin-top: 1rem;
+  padding: 0 0.5rem;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.middle-divider {
+  position: absolute;
+  top: 2rem;
+  height: 120px;
+  width: 1px;
+  background-color: #969696;
 }
 
 .result-card:not(.show) {
@@ -143,9 +157,9 @@ header h1 {
 
 #map {
   width: 100vw;
-  height: calc(100vh - 30rem);
+  height: calc(100vh - 20rem);
   position: absolute;
-  top: 30rem;
+  top: 20rem;
 }
 
 @media (min-width: 1000px) {
@@ -158,12 +172,13 @@ header h1 {
     font-size: 1.8rem;
   }
   .result-card {
-    margin-top: 5rem;
     padding: 3rem 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
