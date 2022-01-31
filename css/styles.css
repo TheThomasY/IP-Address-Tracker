@@ -45,7 +45,7 @@ body {
 }
 
 header {
-  margin-top: 3rem;
+  margin-top: 2rem;
   color: #ffffff;
 }
 
@@ -57,7 +57,7 @@ header h1 {
 .search-bar {
   width: 88%;
   max-width: 55.5rem;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
 }
 
 .search-bar input {
@@ -137,8 +137,8 @@ header h1 {
 
 .result-card .result {
   margin-top: 1rem;
-  padding: 0 0.5rem;
-  font-size: 2rem;
+  padding: 0 1rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
